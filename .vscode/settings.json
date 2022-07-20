@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net6.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/2fada439-f1c8-4f6e-8c4f-885351364a5c/microsoft.web/sites/subscriptions/2fada439-f1c8-4f6e-8c4f-885351364a5c/resourceGroups/lp-demo-1/providers/Microsoft.Web/sites/lpappservicedemo01-code"
+}
