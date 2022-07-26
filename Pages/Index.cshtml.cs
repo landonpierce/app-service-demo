@@ -31,4 +31,13 @@ public class IndexModel : PageModel
         var secret = await _keyVaultSecretClient.GetSecretAsync("secret2");
         ViewData["Secret2"] = secret.Value.Value; 
     }
+
+    public async Task OnPost() {
+        var secretName = Request.Form["secretname"].ToString();
+        var secretValue = Request.Form["secretvalue"].ToString();
+
+        // Stores Secrets submitted inside Azure Key Vault
+        await _keyVaultSecretClient.SetSecretAsync(new KeyVaultSecret(secretName, secretValue));
+    }
+
 }
